@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 01</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+<h1>heading  with h1</h1>
+    <h2>heading with h2</h2>
+    <h3>heading with h3</h3>
+    <h4>heading with h4</h4>
+    <h5>heading wih h5</h5>
+    <h6>heading with h6</h6>
+    <img src="img.jpg">
+    <table style="text-align: center;">
+        <tr>
+            <th>Roll no</th>
+            <th colspan="2">Name</th>
+            <th >Course</th>
+        </tr>
+        <tr>
+            <td>94604</td>
+            <td>Sakshi</td>
+            <td>khot</td>
+            <td rowspan="2">MERN</td>
+        </tr>
+        <tr>
+            <td>94605</td>
+            <td>sneha</td>
+            <td>Patil</td>
+            <!-- <td>MERN</td> -->
+        </tr>
+    </table>
+    <br>
+
+    <table style="text-align: center;">
+        <tr>
+            <th>name</th>
+            <td>abc</td>
+        </tr>
+        <tr>
+            <th rowspan="2">phone</th>
+            <td>123456</td>
+            
+        </tr>
+        <tr>
+            <td>67890</td>
+        </tr>
+    </table>
+
+
+    <h3 >FORM</h3>
+    <form>
+    <label>Enter your name   :</label>
+    <input type="text">
+    <br>
+    <label>Select course  :</label>
+    
+    <select>
+        <option>MERN</option>
+        <option>GEN-AI</option>
+        <option>Data Science</option>
+        <option>Machine Learning</option>
+        
+    </select>
+    <br>
+
+    <label>give your feed back :</label>
+    <br><br>
+    <textarea rows="3" cols="50"></textarea>
+    <br><br>
+    <button   type="button" onclick="alert('Your response submitted successfully !')"> SUBMIT</button>
+
+    </form>
+    </div>
+    
+   
+</body>
+</html>
