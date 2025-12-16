@@ -1,0 +1,136 @@
+
+
+       
+        
+        
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: medium;
+           
+            
+        }
+       ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+       }
+       li{
+        display: flex;
+        align-items: center;
+       }
+        input{
+            border:1px solid black;
+            
+            border-radius:2px;
+            width: 60%;
+            height: 30px;
+
+        }
+   .input-row{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+        h2{
+            text-align: center;
+        }
+     
+            .add-btn{
+            background-color:#007bff;
+           
+            color: white;
+            
+            width:30%;
+            height: 35px;
+            border-radius: 4px;
+            }
+            .del-btn{
+                 background-color:rgb(228, 57, 57);
+           
+            color: white;
+            
+            width:80px;
+            height: 35px;
+            border-radius: 4px;
+            }
+
+       
+        
+        li span{
+            flex: 1;
+        }
+        .container{
+            box-shadow:0 8px 20px rgba(0,0,0,0.25);
+            border-radius: 10px;
+            width: 350px;
+            
+           padding-left: 30px;
+           
+           background-color: white;
+        }
+
+        
+    </style>
+    
+</head>
+<body>    
+
+<div class="container">
+  <h2>Todo App</h2>
+  <div class="input-row">
+<input type="text" id="todo" placeholder="Enter a todo" >
+  <button  class="add-btn"  onclick="add_todo()">Add</button>
+  </div>
+  
+  <ul id="child">
+
+  </ul>
+</div>
+
+<script>
+    function add_todo(){
+        const text=document.getElementById("todo").value.trim();
+        if(text===""){
+            alert("Please enter the text")
+            return ;
+        }
+        const li=document.createElement("li")
+        const span=document.createElement("span")
+        span.innerText=text;
+        //li.innerText=text+" "
+
+        const delBtn=document.createElement("button")
+        delBtn.innerText="Delete"
+        delBtn.classList.add("del-btn")
+
+        delBtn.addEventListener("click",function(){
+            li.remove();
+        })
+        li.appendChild(span)
+        li.appendChild(delBtn)
+       
+        document.getElementById("child").appendChild(li);
+        document.getElementById("todo").value="";
+
+        
+    
+    }
+</script>
+</body>
+</html>
